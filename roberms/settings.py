@@ -98,7 +98,7 @@ DATABASES1 = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'green_note',
+        'NAME': 'gnote',
         'USER': 'root',
         'HOST': '127.0.0.1',
         'PORT': '3306',
