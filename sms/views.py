@@ -1752,7 +1752,7 @@ def water_reports(request):
     }
     return render(request, 'sms/water_reports.html', context)
 def water_payments(request):
-    payments = WaterPaymentReceived.objects.all().order_by('-id')[:100]
+    payments = WaterPaymentReceived.objects.all().order_by('-pay_date')[:100]
     context = {
         'payments': payments
     }
@@ -1857,7 +1857,7 @@ def edit_sys_config(request, client_id):
     return render(request, 'sms/edit_sys_config.html', context)
 
 def meter_readings(request):
-    meter_readings = WaterMeterReadings.objects.all().order_by('-id')[:600]
+    meter_readings = WaterMeterReadings.objects.all().order_by('-read_date')[:600]
     #meter_readingss = WaterMeterReadings.objects.all().delete()
 
     context = {
@@ -4823,7 +4823,7 @@ def sms_reports(request):
 def water_sent_sms(request):
     customer = Customer.objects.filter(user_ptr_id=request.user.id).first()
     if customer is not None:
-        m = WaterOutbox.objects.filter().order_by('-id')[:600]
+        m = WaterOutbox.objects.filter().order_by('-out_date')[:600]
         if m.count() > 0:
             # pprint(m)
             context = {
