@@ -534,7 +534,7 @@ class WaterMeterReadingsRaw(models.Model):
         verbose_name_plural = 'water_meterreading_raw'
 
 class WaterBillSent(models.Model):
-    text_message = models.CharField(max_length=250)
+    text_message = models.CharField(max_length=550)
     dest_msisdn = models.CharField(max_length=250)
     account_name = models.CharField(max_length=250, null=True, default=0)
     account_number = models.CharField(max_length=250)
@@ -600,7 +600,7 @@ class WaterOutbox(models.Model):
     timestamp = models.CharField(max_length=250,null=True)
     user_id = models.IntegerField(null=True)
     dest_msisdn = models.CharField(max_length=250, null=True, default=0)
-    text_message = models.CharField(max_length=400)
+    text_message = models.CharField(max_length=500)
     sender_name = models.CharField(max_length=250, null=True)
     track_code = models.CharField(max_length=250, null=True)
     client = models.IntegerField( null=True)
