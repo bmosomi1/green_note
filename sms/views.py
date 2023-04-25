@@ -742,7 +742,7 @@ def multi_search(request):
             except ValueError:
                 if len(search_key)>2:
                     client = WaterClientAll.objects.filter(names__icontains=search_key)
-                if len(search_key)>3:
+                if len(search_key)>12:
                     client = WaterClientAll.objects.filter(provided_account__icontains=search_key)
                      
                 
