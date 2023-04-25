@@ -1857,7 +1857,7 @@ def edit_sys_config(request, client_id):
     return render(request, 'sms/edit_sys_config.html', context)
 
 def meter_readings(request):
-    meter_readings = WaterMeterReadings.objects.all().order_by('-id')[:10]
+    meter_readings = WaterMeterReadings.objects.all().order_by('-id')[:600]
     #meter_readingss = WaterMeterReadings.objects.all().delete()
 
     context = {
