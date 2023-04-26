@@ -940,7 +940,7 @@ def water_apps(request):
         
         for month in months:
             # print(week)
-            monthly_units = WaterMeterReadings.objects.filter(read_date__month=this_month).aggregate(total=Sum('units_consumed'))['total'] or 0
+            monthly_units = int(WaterMeterReadings.objects.filter(read_date__month=this_month).aggregate(total=Sum('units_consumed'))['total'] or 0)
                
             messages = WaterMeterReadings.objects.filter(read_date__gte=one_month_ago, read_date__lte=current_day).count()
             monthly_all_consumptions.append(monthly_units)
