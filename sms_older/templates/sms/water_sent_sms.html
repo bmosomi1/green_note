@@ -37,7 +37,7 @@
                 <tr>
                     <td><a href="{% url 'Invoices:client_invoices' outgoing.id %}">{{ outgoing.dest_msisdn }}</a></td>
                     <td>{{ outgoing.text_message }}</td>
-                    <td>{{ outgoing.out_date|date:'Y:m:d H:m' }}</td>
+                    <td>{{ outgoing.out_date|date:'Y:m:d H:M' }}</td>
                     <td>{{ outgoing.delivery_status }}</td>
 
 
