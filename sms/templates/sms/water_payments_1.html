@@ -29,6 +29,7 @@
                     <th>Received On</th>
 
                     <th>Accout Name</th>
+                    <th>A/C</th>
                     <th>Amount</th>
 
                     <th>Received From</th>
@@ -45,6 +46,7 @@
                     <td><a href="{% url 'sms:edit_water_client' 1 %}">{{ client.account_name }}</a></td>
 
                     <td>{{ client.amount }}</td>
+                    <td>{{ client.acount_number }}</td>
                     <td>{{ client.received_from }}</td>
                     <td>{{ client.confirmation_code }}</td>
                     <td>{{ client.balance_carried_forward }}</td>

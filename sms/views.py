@@ -1756,7 +1756,7 @@ def water_payments(request):
     context = {
         'payments': payments
     }
-    return render(request, 'sms/water_paymentsg.html', context)
+    return render(request, 'sms/water_payments.html', context)
 def water_payments_clients(request,client_id):
     payments = WaterPaymentReceived.objects.filter(account_number=client_id)
     context = {
